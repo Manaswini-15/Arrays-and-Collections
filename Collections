@@ -1,0 +1,57 @@
+Collections in Java:
+The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+Java Collection means a single unit of objects.
+Java Collection framework provides many interfaces (Set, List, Queue, Deque) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+
+
+ArrayList
+The ArrayList class implements the List interface. It uses a dynamic array to store the duplicate element of different data types. The ArrayList class maintains the insertion order and is non-synchronized. The elements stored in the ArrayList class can be randomly accessed. Consider the following example.
+
+import java.util.*;  
+class TestJavaCollection1{  
+public static void main(String args[]){  
+ArrayList<String> list=new ArrayList<String>();//Creating arraylist  
+list.add("Ravi");//Adding object in arraylist  
+list.add("Vijay");  
+list.add("Ravi");  
+list.add("Ajay");  
+//Traversing list through Iterator  
+Iterator itr=list.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+Output:
+
+Ravi
+Vijay
+Ravi
+Ajay
+LinkedList
+LinkedList implements the Collection interface. It uses a doubly linked list internally to store the elements. It can store the duplicate elements. It maintains the insertion order and is not synchronized. In LinkedList, the manipulation is fast because no shifting is required.
+
+Consider the following example.
+
+import java.util.*;  
+public class TestJavaCollection2{  
+public static void main(String args[]){  
+LinkedList<String> al=new LinkedList<String>();  
+al.add("Ravi");  
+al.add("Vijay");  
+al.add("Ravi");  
+al.add("Ajay");  
+Iterator<String> itr=al.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+Output:
+
+Ravi
+Vijay
+Ravi
+Ajay
+
