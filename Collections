@@ -29,6 +29,8 @@ Ravi
 Vijay
 Ravi
 Ajay
+
+
 LinkedList
 LinkedList implements the Collection interface. It uses a doubly linked list internally to store the elements. It can store the duplicate elements. It maintains the insertion order and is not synchronized. In LinkedList, the manipulation is fast because no shifting is required.
 
@@ -54,4 +56,120 @@ Ravi
 Vijay
 Ravi
 Ajay
+
+Vector
+Vector uses a dynamic array to store the data elements. It is similar to ArrayList. However, It is synchronized and contains many methods that are not the part of Collection framework.
+
+Consider the following example.
+
+import java.util.*;  
+public class TestJavaCollection3{  
+public static void main(String args[]){  
+Vector<String> v=new Vector<String>();  
+v.add("Ayush");  
+v.add("Amit");  
+v.add("Ashish");  
+v.add("Garima");  
+Iterator<String> itr=v.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+Output:
+
+Ayush
+Amit
+Ashish
+Garina
+
+Stack
+The stack is the subclass of Vector. It implements the last-in-first-out data structure, i.e., Stack. The stack contains all of the methods of Vector class and also provides its methods like boolean push(), boolean peek(), boolean push(object o), which defines its properties.
+
+Consider the following example.
+
+import java.util.*;  
+public class TestJavaCollection4{  
+public static void main(String args[]){  
+Stack<String> stack = new Stack<String>();  
+stack.push("Ayush");  
+stack.push("Garvit");  
+stack.push("Amit");  
+stack.push("Ashish");  
+stack.push("Garima");  
+stack.pop();  
+Iterator<String> itr=stack.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+Output:
+
+Ayush
+Garvit
+Amit
+Ashish
+
+
+Java Comparable interface
+Java Comparable interface is used to order the objects of the user-defined class. This interface is found in java.lang package and contains only one method named compareTo(Object). It provides a single sorting sequence only, i.e., you can sort the elements on the basis of single data member only. For example, it may be rollno, name, age or anything else.
+
+compareTo(Object obj) method
+public int compareTo(Object obj): It is used to compare the current object with the specified object. It returns
+
+positive integer, if the current object is greater than the specified object.
+negative integer, if the current object is less than the specified object.
+zero, if the current object is equal to the specified object.
+We can sort the elements of:
+String objects
+Wrapper class objects
+User-defined class objects
+Collections class
+Collections class provides static methods for sorting the elements of collections. If collection elements are of Set or Map, we can use TreeSet or TreeMap. However, we cannot sort the elements of List. Collections class provides methods for sorting the elements of List type elements.
+
+Method of Collections class for sorting List elements
+public void sort(List list): It is used to sort the elements of List. 
+
+Java Comparable Example
+Let's see the example of the Comparable interface that sorts the list elements on the basis of age.
+class Student implements Comparable<Student>{  
+int rollno;  
+String name;  
+int age;  
+Student(int rollno,String name,int age){  
+this.rollno=rollno;  
+this.name=name;  
+this.age=age;  
+}  
+  
+public int compareTo(Student st){  
+if(age==st.age)  
+return 0;  
+else if(age>st.age)  
+return 1;  
+else  
+return -1;  
+}  
+}
+
+Java Comparator interface:
+Java Comparator interface is used to order the objects of a user-defined class.
+This interface is found in java.util package and contains 2 methods compare(Object obj1,Object obj2) and equals(Object element).
+It provides multiple sorting sequences, i.e., you can sort the elements on the basis of any data member, for example, rollno, name, age or anything else.
+
+Student.java
+This class contains three fields rollno, name and age and a parameterized constructor.
+
+class Student{  
+int rollno;  
+String name;  
+int age;  
+Student(int rollno,String name,int age){  
+this.rollno=rollno;  
+this.name=name;  
+this.age=age;  
+}  
+}  
+
 
