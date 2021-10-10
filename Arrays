@@ -1,0 +1,44 @@
+//An array is a container object that holds a fixed number of values of a single type.
+//The length of an array is established when the array is created.
+//After creation, its length is fixed.
+//There are two types of array.
+
+  //Single Dimensional Array
+  //Multidimensional Array
+  //Java Program to illustrate how to declare, instantiate, initialize  
+//and traverse the Java array.  
+class Testarray{  
+public static void main(String args[]){  
+int a[]=new int[5];//declaration and instantiation  
+a[0]=10;//initialization  
+a[1]=20;  
+a[2]=30;  
+a[3]=40;  
+a[4]=50;  
+//traversing array  
+for(int i=0;i<a.length;i++)//length is the property of array  
+//traversing array    
+System.out.println(a[i]);
+}} 
+output:
+  10 20 30 40 50
+  
+  
+  //multi-dimensional array:
+  //Java Program to illustrate the use of multidimensional array  
+class Testarray3{  
+public static void main(String args[]){  
+//declaring and initializing 2D array  
+int arr[][]={{1,2,3},{2,4,5},{4,4,5}};  
+//printing 2D array  
+for(int i=0;i<3;i++){  
+ for(int j=0;j<3;j++){  
+   System.out.print(arr[i][j]+" ");  
+ }  
+ System.out.println();  
+}  
+}}
+output:
+1 2 3
+2 4 5
+4 4 5
